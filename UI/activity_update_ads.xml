@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:background="@color/background_color_main"
+    tools:context=".View.UpdateAdsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color_main"
+            android:clickable="false"
+            android:focusable="true"
+            android:orientation="vertical"
+            tools:context=".View.UpdateAdsActivity">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="212dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="30dp"
+                android:src="@drawable/profile_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_ProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:text="Product Name"
+                    android:textColor="@color/general_text_color"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_weight="2"/>
+
+                <EditText
+                    android:id="@+id/et_ProductName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/general_text_color"
+                    android:hint="Enter Product name"
+                    android:maxLength="55"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/general_text_color"
+                    android:textColorHint="@color/general_text_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Price"
+                    android:textColor="@color/general_text_color"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="$"
+                    android:textColor="@color/general_text_color"
+                    android:textSize="20dp" />
+
+
+                <EditText
+                    android:id="@+id/et_Price"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:backgroundTint="@color/general_text_color"
+                    android:hint="Enter Price"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:textColor="@color/general_text_color"
+                    android:textColorHint="@color/general_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="Item Status"
+                    android:textColor="@color/general_text_color"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_weight="2"/>
+
+                <Spinner
+                    android:id="@+id/itemStatusSpinner"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="Description (optional) "
+                android:textColor="@color/general_text_color"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"/>
+
+            <EditText
+                android:id="@+id/et_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Short Description"
+                android:lines="2"
+                android:maxLength="400"
+                android:backgroundTint="@color/general_text_color"
+                android:textColor="@color/general_text_color"
+                android:textColorHint="@color/general_text_color" />
+
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" android:padding="25dp">
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_beautification"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Update"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="20sp"
+                    android:textColor="@color/button_text"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_beautification"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Delete"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="20sp"
+                    android:textColor="@color/button_text"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

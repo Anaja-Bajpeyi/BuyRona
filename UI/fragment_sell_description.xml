@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_main"
+    tools:context=".View.UploadFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color_main"
+            android:clickable="false"
+            android:focusable="true"
+            android:orientation="vertical"
+            tools:context=".View.UploadFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/Product_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Product Name"
+                    android:textColor="@color/general_text_color"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_text_file_name"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/general_text_color"
+                    android:gravity="center_vertical|left"
+                    android:hint="Enter Product name"
+                    android:maxLength="55"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/general_text_color"
+                    android:textColorHint="@color/general_text_color"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/Price_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="Price"
+                    android:textColor="@color/general_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="$"
+                    android:textSize="20sp"
+                    android:textColor="@color/general_text_color"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/edit_text_file_price"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/general_text_color"
+                    android:hint="Enter Price"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:textColor="@color/general_text_color"
+                    android:textColorHint="@color/general_text_color"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Description_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="Description (optional) "
+                android:textColor="@color/general_text_color"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:backgroundTint="@color/general_text_color"
+                android:hint="Short Description"
+                android:lines="2"
+                android:maxLength="400"
+                android:textColor="@color/general_text_color"
+                android:textColorHint="@color/general_text_color" />
+
+
+            <Button
+                android:id="@+id/button_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/button_beautification"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Post"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/button_text"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
